@@ -20,5 +20,7 @@ from crud_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.add_show, name= 'add_show')
+    path('', views.add_show, name= 'home'),
+    path('delete/<int:id>/', views.delete_data, name = 'deletedata'),
+    path('<int:id>/', views.update_data, name='updatedata')
 ]

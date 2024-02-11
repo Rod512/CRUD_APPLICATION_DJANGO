@@ -1,4 +1,14 @@
 {% extends "crud_app/base.html" %}
 {% block content %}
-    <h4>Update student</h4>
+    <div class="row">
+        <div class="col-sm-8 offset-2 mb-2">
+            <h4 class="alert alert-info">Update Student Info</h4>
+            <form action="" method='post'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value='update' class='btn btn-success'>
+                <a href="{% url 'home' %}" class="btn btn-info">Back to Home</a>
+            </form>
+        </div>
+    </div>
 {% endblock content %}
